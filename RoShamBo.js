@@ -24,5 +24,10 @@ getComputerChoice()
 
 function getHumanChoice() {
     let HumanChoice = prompt();
+    if (HumanChoice === "Rock" || HumanChoice === "Paper" || HumanChoice === "Scissors") {
+        return HumanChoice;
+    } else {
+        return getHumanChoice();
+    }
 }
-getHumanChoice()
+console.log(getHumanChoice())
