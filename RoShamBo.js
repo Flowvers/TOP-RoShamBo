@@ -1,6 +1,6 @@
-// getComputerChoice function
-    // Generate varaible X = random string rock paper scissors
-    // Output random string
+function capitalize(string) {
+    return String(string).charAt(0).toUpperCase() + String(string).slice(1).toLowerCase();
+}
 
 function getComputerChoice() {
     let randInt = Math.floor(Math.random() * 3);
@@ -20,17 +20,19 @@ function getComputerChoice() {
     }
 }   
 
-getComputerChoice()
-
 function getHumanChoice() {
-    let HumanChoice = prompt();
+    let HumanChoice = capitalize(prompt());
     if (HumanChoice === "Rock" || HumanChoice === "Paper" || HumanChoice === "Scissors") {
         return HumanChoice;
     } else {
         return getHumanChoice();
     }
 }
-console.log(getHumanChoice())
+console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+
+}
