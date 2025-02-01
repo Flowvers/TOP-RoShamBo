@@ -1,4 +1,3 @@
-console.log("Hellow World!");
 // getComputerChoice function
     // Generate varaible X = random string rock paper scissors
     // Output random string
@@ -16,9 +15,14 @@ function getComputerChoice() {
             console.log("Scissors")
             break;
         default:
-            console.log("Default")
+            console.log("Error")
             break;
     }
 }   
 
 getComputerChoice()
+
+function getHumanChoice() {
+    let HumanChoice = prompt();
+}
+getHumanChoice()
