@@ -34,5 +34,13 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-
+    if (humanChoice === computerChoice) {
+        return(console.log("Tie, you both chose " + humanChoice));
+    } else if (humanChoice==="Rock" && computerChoice==="Paper" || humanChoice==="Paper" && computerChoice==="Scissors" || humanChoice==="Scissors" && computerChoice==="Rock") {
+        return(console.log("You lose, " + computerChoice + " beats " + humanChoice + "!"));
+    } else if (humanChoice==="Paper" && computerChoice==="Rock" || humanChoice==="Rock" && computerChoice==="Scissors" || humanChoice==="Scissors" && computerChoice==="Paper") {
+        return(console.log("You win, " + humanChoice + " beats " + computerChoice + "!"));
+    }
 }
+
+playRound("Rock","Rock");
