@@ -37,10 +37,12 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         return(console.log("Tie, you both chose " + humanChoice));
     } else if (humanChoice==="Rock" && computerChoice==="Paper" || humanChoice==="Paper" && computerChoice==="Scissors" || humanChoice==="Scissors" && computerChoice==="Rock") {
+        computerScore = ++computerScore;
         return(console.log("You lose, " + computerChoice + " beats " + humanChoice + "!"));
     } else if (humanChoice==="Paper" && computerChoice==="Rock" || humanChoice==="Rock" && computerChoice==="Scissors" || humanChoice==="Scissors" && computerChoice==="Paper") {
+        humanScore = ++humanScore;
         return(console.log("You win, " + humanChoice + " beats " + computerChoice + "!"));
     }
 }
 
-playRound("Rock","Rock");
+playRound("Rock","Paper");
